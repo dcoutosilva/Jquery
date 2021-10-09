@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Altura e Comprimento Teste</title>
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <script type="text/javascript"
+            src="jquery.js"></script>
+    <script type="text/javascript">
+  
+      $(function(){
+        report();
+      });
+  
+      function report(){
+        $('#display').html(
+          $('#testSubject').width()+'x'+$('#testSubject').height()
+        );
+      }
+
+
+    </script>
+    <style>
+        #testSubject{
+          background-color: plum;
+          border: 1px solid darkmagenta;
+          padding: 8px;
+          font-size: .85em;
+        }
+    </style>
+  </head>
+
+  <body onresize="report();">
+    <div id="testSubject">
+        Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Integer et massa nec erat interdum aliquet in et justo. 
+        Integer sollicitudin purus vel quam rhoncus euismod. 
+        Proin quis fermentum purus, blandit tempus est. 
+        Vestibulum consequat euismod dui ac pretium. 
+        Etiam non nulla at leo blandit laoreet. 
+        Phasellus consequat magna sem, id venenatis nibh auctor id. 
+        Suspendisse feugiat tortor eget tortor pellentesque cursus. 
+        Sed congue elementum ex, a imperdiet eros. 
+        Aenean magna ex, faucibus ut suscipit ut, interdum sed sapien. 
+        Mauris placerat varius justo, facilisis lacinia arcu iaculis in. 
+        Phasellus vel iaculis justo. 
+        Donec convallis lacus efficitur pretium dictum. 
+        In hac habitasse.
+    
+    </div>
+    <div id="display"></div>
+    
+  </body>
+</html>

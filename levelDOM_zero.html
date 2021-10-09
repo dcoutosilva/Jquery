@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html id="greatgrandpa">
+  <head>
+    <title> BORBULHAMENTO EVENTO DOM LEVEL 0</title>
+    <script type="text/javascript"
+            src="jquery.js"></script>
+    <script type="text/javascript">
+   /* 
+   outro exemplo do livro
+   $(function(){
+        $('#vstar')[0].onmouseover = function(event) {
+            say('Clique na Imagem!');//ao mover o mouse dentro da imagem.
+        }
+    });
+    function say(text){
+        $('#console').append('<div>'+ new Date()+' ' + text+'</div>');
+    }*/
+
+    $(function(){
+        $('*').each(function(){
+            var current = this;//seleciona cada elemento da pagina
+            this.onclick = function(event){//aplica o manipulador onclick pra cada elemento selecionado
+                if(!event) event = window.event;
+                var target = (event.target) ? event.target:event.srcElement;
+                say('Para ' + current.tagName + '#' + current.id + 'o alvo é ' + target.id);
+            }
+        });
+    });
+    function say (text){
+        $('#console').append('<div>' + text + '</div>');
+    }
+
+    </script>
+
+  </head>
+  <body id="greatgrandpa">
+      <div id="grandpa">
+          <div id="pops">
+            <img id="vstar" src="download.jpg"/>
+          </div>
+
+      </div>
+      <div id="console"></div>
+  </body>
+</html>
